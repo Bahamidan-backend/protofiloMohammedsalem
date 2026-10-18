@@ -1,4 +1,6 @@
-export const portfolioData = {
+import { getAssetUrl } from '@/lib/utils';
+
+const rawPortfolioData = {
   personal: {
     name: {
       en: "Mohammed Salem Bahumaidan",
@@ -746,3 +748,27 @@ public partial class PosCheckoutViewModel : ObservableObject
     }
   }
 };
+
+const resolveAssetUrls = (obj) => {
+  if (!obj) return obj;
+  if (typeof obj === 'string') {
+    if (obj.startsWith('/') && !obj.startsWith('//')) {
+      return getAssetUrl(obj);
+    }
+    return obj;
+  }
+  if (Array.isArray(obj)) {
+    return obj.map(resolveAssetUrls);
+  }
+  if (typeof obj === 'object') {
+    const res = {};
+    for (const key of Object.keys(obj)) {
+      res[key] = resolveAssetUrls(obj[key]);
+    }
+    return res;
+  }
+  return obj;
+};
+
+export const portfolioData = resolveAssetUrls(rawPortfolioData);
+

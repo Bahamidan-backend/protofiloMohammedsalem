@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@/lib/utils";
+import { cn, getAssetUrl } from "@/lib/utils";
 
 /* ── the curved row ──────────────────────────────────────────────
  * Scroll Tilted Grid turned on its side, with the tilt drawn as a curve.
@@ -291,7 +291,7 @@ export function TiltedGridHero({
                 >
                   {img ? (
                     <img
-                      src={img.src}
+                      src={getAssetUrl(img.src)}
                       alt={k === 0 ? (img.alt ?? "") : ""}
                       draggable={false}
                       className="absolute top-0 max-w-none object-cover"

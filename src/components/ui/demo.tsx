@@ -1,6 +1,7 @@
 import React from "react";
 import AboutUsSection from "@/components/ui/about-us-section";
 import { TiltedGridHero } from "@/components/ui/tilted-grid-hero";
+import { getAssetUrl } from "@/lib/utils";
 
 const DemoOne = () => {
   return <AboutUsSection />;
@@ -12,35 +13,35 @@ export default DemoOne;
 // Mohammed Bahumaidan - Production Brands & Systems Showcase
 const IMAGES = [
   {
-    src: "/logos/nexcash-logo.jpg",
+    src: getAssetUrl("/logos/nexcash-logo.jpg"),
     alt: "شعار وهوية نظام NexCash المحاسبي ونقاط البيع (NexCash ERP & POS)",
   },
   {
-    src: "/logos/rental-saas-logo.jpg",
+    src: getAssetUrl("/logos/rental-saas-logo.jpg"),
     alt: "شعار وهوية منصة سلس لتأجير الموارد (Salis Rental SaaS)",
   },
   {
-    src: "/logos/nuqtat-wasl-logo.jpg",
+    src: getAssetUrl("/logos/nuqtat-wasl-logo.jpg"),
     alt: "شعار وهوية تطبيق نقطة وصل للأماكن الخدمية (Nuqtat Wasl Platform)",
   },
   {
-    src: "/logos/fondoki-logo.jpg",
+    src: getAssetUrl("/logos/fondoki-logo.jpg"),
     alt: "شعار وهوية نظام فندقي لإدارة المنشآت الفندقية (Fondoki Hotel System)",
   },
   {
-    src: "/logos/rental-saas-logo.jpg",
+    src: getAssetUrl("/logos/rental-saas-logo.jpg"),
     alt: "Salis Rental Cloud SaaS Brand Identity",
   },
   {
-    src: "/logos/nexcash-logo.jpg",
+    src: getAssetUrl("/logos/nexcash-logo.jpg"),
     alt: "NexCash Brand Identity",
   },
   {
-    src: "/logos/nuqtat-wasl-logo.jpg",
+    src: getAssetUrl("/logos/nuqtat-wasl-logo.jpg"),
     alt: "Nuqtat Wasl Brand Identity",
   },
   {
-    src: "/logos/fondoki-logo.jpg",
+    src: getAssetUrl("/logos/fondoki-logo.jpg"),
     alt: "Fondoki Brand Identity",
   },
 ];

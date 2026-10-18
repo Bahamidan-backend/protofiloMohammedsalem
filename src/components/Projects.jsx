@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Briefcase, CheckCircle2, ArrowUpRight, Cpu, Layers, Maximize2, X, Eye } from 'lucide-react';
 import { TiltedGridHero } from '@/components/ui/tilted-grid-hero';
 import { BentoCard } from '@/components/ui/bento';
+import { getAssetUrl } from '@/lib/utils';
 
 export const Projects = ({ data, lang }) => {
   const { projects } = data;
@@ -15,39 +16,39 @@ export const Projects = ({ data, lang }) => {
 
   const showcaseImages = [
     {
-      src: "/logos/nexcash-logo.jpg",
+      src: getAssetUrl("/logos/nexcash-logo.jpg"),
       alt: lang === 'ar' ? "هوية وشعار نظام NexCash" : "NexCash ERP & POS Brand Logo",
     },
     {
-      src: "/logos/rental-saas-logo.jpg",
+      src: getAssetUrl("/logos/rental-saas-logo.jpg"),
       alt: lang === 'ar' ? "شعار وهوية منصة سلس لتأجير الموارد (Rental SaaS)" : "Salis Rental SaaS Brand Identity",
     },
     {
-      src: "/logos/nuqtat-wasl-logo.jpg",
+      src: getAssetUrl("/logos/nuqtat-wasl-logo.jpg"),
       alt: lang === 'ar' ? "شعار وهوية تطبيق نقطة وصل للأماكن الخدمية" : "Nuqtat Wasl Platform Brand Identity",
     },
     {
-      src: "/logos/fondoki-logo.jpg",
+      src: getAssetUrl("/logos/fondoki-logo.jpg"),
       alt: lang === 'ar' ? "شعار وهوية نظام فندقي لإدارة الفنادق" : "Fondoki Hotel Management Suite Brand",
     },
     {
-      src: "/logos/rental-saas-logo.jpg",
+      src: getAssetUrl("/logos/rental-saas-logo.jpg"),
       alt: lang === 'ar' ? "هوية وشعار مشروع تأجير الموارد السحابي (سلس)" : "Salis Rental Cloud SaaS Logo",
     },
     {
-      src: "/logos/nexcash-logo.jpg",
+      src: getAssetUrl("/logos/nexcash-logo.jpg"),
       alt: lang === 'ar' ? "شعار نظام NexCash المحاسبي" : "NexCash POS Brand Logo",
     },
     {
-      src: "/logos/nuqtat-wasl-logo.jpg",
+      src: getAssetUrl("/logos/nuqtat-wasl-logo.jpg"),
       alt: lang === 'ar' ? "هوية تطبيق نقطة وصل المحلية" : "Nuqtat Wasl Local Services Identity",
     },
     {
-      src: "/logos/fondoki-logo.jpg",
+      src: getAssetUrl("/logos/fondoki-logo.jpg"),
       alt: lang === 'ar' ? "هوية فندقي لإدارة المنشآت الفندقية" : "Fondoki Hospitality Platform Logo",
     },
     {
-      src: "/logos/rental-saas-logo.jpg",
+      src: getAssetUrl("/logos/rental-saas-logo.jpg"),
       alt: lang === 'ar' ? "شعار منصة سلس لإدارة التأجير" : "Salis Rental SaaS Logo",
     },
   ];
@@ -114,7 +115,7 @@ export const Projects = ({ data, lang }) => {
                 <div
                   onClick={() => {
                     setLightboxData({
-                      image: "/logos/nexcash-logo.jpg",
+                      image: getAssetUrl("/logos/nexcash-logo.jpg"),
                       title: lang === 'ar' ? 'شعار وهوية نظام NexCash المحاسبي' : 'NexCash ERP & POS Brand Logo',
                       desc: lang === 'ar' ? 'الهوية والشعار الرسمي لنظام نقاط البيع وإدارة الموارد NexCash' : 'Official brand identity for NexCash ERP & POS system.'
                     });
@@ -133,7 +134,7 @@ export const Projects = ({ data, lang }) => {
                   title={lang === 'ar' ? 'انقر لتكبير الشعار' : 'Click to enlarge logo'}
                 >
                   <img
-                    src="/logos/nexcash-logo.jpg"
+                    src={getAssetUrl("/logos/nexcash-logo.jpg")}
                     alt="NexCash Logo"
                     style={{ height: '32px', width: 'auto', objectFit: 'contain' }}
                   />
@@ -186,7 +187,7 @@ export const Projects = ({ data, lang }) => {
                 }
                 onClick={() => {
                   setLightboxData({
-                    image: "/nexcash/main-pos.jpg",
+                    image: getAssetUrl("/nexcash/main-pos.jpg"),
                     title: lang === 'ar' ? 'شاشة الكاشير ونقاط البيع التفاعلية' : 'NexCash Frontline POS Cashier Screen',
                     desc: lang === 'ar' ? 'شاشة الكاشير الرئيسية لمعالجة الطلبات السريعة، تصنيف الوجبات، والفوترة اللحظية.' : 'High-speed cashier POS interface for order processing, categories, and real-time billing.'
                   });
@@ -206,7 +207,7 @@ export const Projects = ({ data, lang }) => {
                       </div>
                     </div>
                     <img
-                      src="/nexcash/main-pos.jpg"
+                      src={getAssetUrl("/nexcash/main-pos.jpg")}
                       alt="NexCash POS Screen"
                       className="bento-screen-img"
                       loading="lazy"
@@ -228,7 +229,7 @@ export const Projects = ({ data, lang }) => {
                 }
                 onClick={() => {
                   setLightboxData({
-                    image: "/nexcash/financial-reports.jpg",
+                    image: getAssetUrl("/nexcash/financial-reports.jpg"),
                     title: lang === 'ar' ? 'التقارير المالية ومطابقة الإيداعات' : 'Financial Reports & Deposit Reconciliation',
                     desc: lang === 'ar' ? 'مطابقة إيرادات النظام مقابل الإيداعات البنكية المعتمدة واحتساب نسب التحويل والفروقات بدقة.' : 'System revenue reconciled against verified bank deposits with precision audit metrics.'
                   });
@@ -245,7 +246,7 @@ export const Projects = ({ data, lang }) => {
                     </div>
                     <div className="bento-metrics-container">
                       <img
-                        src="/nexcash/financial-reports.jpg"
+                        src={getAssetUrl("/nexcash/financial-reports.jpg")}
                         alt="NexCash Performance & Financial Reports"
                         className="bento-metrics-bg"
                         loading="lazy"
@@ -276,7 +277,7 @@ export const Projects = ({ data, lang }) => {
                 }
                 onClick={() => {
                   setLightboxData({
-                    image: "/nexcash/cash-report.jpg",
+                    image: getAssetUrl("/nexcash/cash-report.jpg"),
                     title: lang === 'ar' ? 'تقرير الصندوق والمناوبات' : 'Full Cash Drawer & Shift Audit',
                     desc: lang === 'ar' ? 'متابعة المبيعات النقدية، متوسط الفاتورة، وحالة إغلاق الدرج والمناوبات.' : 'Shift reconciliation tracking net sales, cash withdrawals, and drawer closeout status.'
                   });
@@ -293,7 +294,7 @@ export const Projects = ({ data, lang }) => {
                       <Eye size={12} style={{ color: 'var(--accent-yellow)' }} />
                     </div>
                     <img
-                      src="/nexcash/cash-report.jpg"
+                      src={getAssetUrl("/nexcash/cash-report.jpg")}
                       alt="NexCash Cash Drawer Audit"
                       className="bento-screen-img"
                       loading="lazy"
@@ -315,7 +316,7 @@ export const Projects = ({ data, lang }) => {
                 }
                 onClick={() => {
                   setLightboxData({
-                    image: "/nexcash/kitchens.jpg",
+                    image: getAssetUrl("/nexcash/kitchens.jpg"),
                     title: lang === 'ar' ? 'إدارة المطابخ وطابعات الفواتير' : 'Kitchen Stations & Thermal Printers',
                     desc: lang === 'ar' ? 'توزيع محطات التحضير والربط مع طابعات XP-80C الحرارية.' : 'Multi-station order routing with dedicated XP-80C thermal printers.'
                   });
@@ -332,7 +333,7 @@ export const Projects = ({ data, lang }) => {
                       <Eye size={12} style={{ color: 'var(--accent-yellow)' }} />
                     </div>
                     <img
-                      src="/nexcash/kitchens.jpg"
+                      src={getAssetUrl("/nexcash/kitchens.jpg")}
                       alt="NexCash Kitchen Stations"
                       className="bento-screen-img"
                       loading="lazy"
@@ -354,7 +355,7 @@ export const Projects = ({ data, lang }) => {
                 }
                 onClick={() => {
                   setLightboxData({
-                    image: "/nexcash/purchases.jpg",
+                    image: getAssetUrl("/nexcash/purchases.jpg"),
                     title: lang === 'ar' ? 'تسجيل المشتريات وإدارة الموردين' : 'Purchase Orders & Supplier Invoicing',
                     desc: lang === 'ar' ? 'شاشة تسجيل فواتير الشراء، حساب التكاليف، والتحديث الفوري للمخزون.' : 'Purchase entry with cost computation, supplier selection, and stock updates.'
                   });
@@ -371,7 +372,7 @@ export const Projects = ({ data, lang }) => {
                       <Eye size={12} style={{ color: 'var(--accent-yellow)' }} />
                     </div>
                     <img
-                      src="/nexcash/purchases.jpg"
+                      src={getAssetUrl("/nexcash/purchases.jpg")}
                       alt="NexCash Purchases & Suppliers"
                       className="bento-screen-img"
                       loading="lazy"
@@ -391,7 +392,7 @@ export const Projects = ({ data, lang }) => {
                   <div
                     onClick={() => {
                       setLightboxData({
-                        image: "/logos/nuqtat-wasl-logo.jpg",
+                        image: getAssetUrl("/logos/nuqtat-wasl-logo.jpg"),
                         title: lang === 'ar' ? 'شعار وهوية تطبيق نقطة وصل' : 'Nuqtat Wasl Platform Brand Logo',
                         desc: lang === 'ar' ? 'الهوية والشعار الرسمي لتطبيق ومنصة نقطة وصل الخدمية' : 'Official brand identity for Nuqtat Wasl Platform.'
                       });
@@ -410,7 +411,7 @@ export const Projects = ({ data, lang }) => {
                     title={lang === 'ar' ? 'انقر لتكبير الشعار' : 'Click to enlarge logo'}
                   >
                     <img
-                      src="/logos/nuqtat-wasl-logo.jpg"
+                      src={getAssetUrl("/logos/nuqtat-wasl-logo.jpg")}
                       alt="Nuqtat Wasl Logo"
                       style={{ height: '32px', width: 'auto', objectFit: 'contain' }}
                     />
@@ -469,7 +470,7 @@ export const Projects = ({ data, lang }) => {
                   }
                   onClick={() => {
                     setLightboxData({
-                      image: "/nuqtat-wasl/admin-dashboard-clean.png",
+                      image: getAssetUrl("/nuqtat-wasl/admin-dashboard-clean.png"),
                       title: lang === 'ar' ? 'لوحة تحكم المشرف وإدارة النظام' : 'Mobile Admin Dashboard & Metrics',
                       desc: lang === 'ar' ? 'متابعة فورية لإجمالي المستخدمين (160+)، المحلات المسجلة، الطلبات الجديدة، وأقسام النظام الشاملة.' : 'Real-time tracking of registered users (160+), active restaurants, incoming order flow, and system navigation.'
                     });
@@ -489,7 +490,7 @@ export const Projects = ({ data, lang }) => {
                         </div>
                       </div>
                       <img
-                        src="/nuqtat-wasl/admin-dashboard-clean.png"
+                        src={getAssetUrl("/nuqtat-wasl/admin-dashboard-clean.png")}
                         alt="Nuqtat Wasl Admin Dashboard"
                         className="bento-mobile-screen-img"
                         loading="lazy"
@@ -511,7 +512,7 @@ export const Projects = ({ data, lang }) => {
                   }
                   onClick={() => {
                     setLightboxData({
-                      image: "/nuqtat-wasl/categories-management-clean.png",
+                      image: getAssetUrl("/nuqtat-wasl/categories-management-clean.png"),
                       title: lang === 'ar' ? 'محرك إدارة وتعديل التصنيفات والفئات' : 'Dynamic Category & Subcategory Engine',
                       desc: lang === 'ar' ? 'إدارة هرمية للتصنيفات والتصنيفات الفرعية للمحلات مع إمكانية التعديل والحذف والحفظ الفوري.' : 'Full hierarchical control over primary categories and subcategories with instant edits, additions, and updates.'
                     });
@@ -531,7 +532,7 @@ export const Projects = ({ data, lang }) => {
                         </div>
                       </div>
                       <img
-                        src="/nuqtat-wasl/categories-management-clean.png"
+                        src={getAssetUrl("/nuqtat-wasl/categories-management-clean.png")}
                         alt="Nuqtat Wasl Categories Engine"
                         className="bento-mobile-screen-img"
                         loading="lazy"
@@ -622,7 +623,7 @@ export const Projects = ({ data, lang }) => {
                   }
                   onClick={() => {
                     setLightboxData({
-                      image: "/logos/nuqtat-wasl-logo.jpg",
+                      image: getAssetUrl("/logos/nuqtat-wasl-logo.jpg"),
                       title: lang === 'ar' ? 'هوية تطبيق نقطة وصل' : 'Nuqtat Wasl Brand Identity',
                       desc: lang === 'ar' ? 'نقطة وصل للأماكن الخدمية المحلية والمطاعم.' : 'Nuqtat Wasl local services and merchant discovery identity.'
                     });
@@ -639,7 +640,7 @@ export const Projects = ({ data, lang }) => {
                         <Eye size={12} style={{ color: 'var(--accent-yellow)' }} />
                       </div>
                       <img
-                        src="/logos/nuqtat-wasl-logo.jpg"
+                        src={getAssetUrl("/logos/nuqtat-wasl-logo.jpg")}
                         alt="Nuqtat Wasl Official Logo"
                         className="bento-screen-img"
                         loading="lazy"
@@ -660,7 +661,7 @@ export const Projects = ({ data, lang }) => {
                   <div
                     onClick={() => {
                       setLightboxData({
-                        image: "/logos/rental-saas-logo.jpg",
+                        image: getAssetUrl("/logos/rental-saas-logo.jpg"),
                         title: lang === 'ar' ? 'شعار وهوية منصة سلس (Salis) لإدارة التأجير' : 'Salis Rental SaaS Brand Logo',
                         desc: lang === 'ar' ? 'الهوية والشعار الرسمي لمنصة تأجير الموارد السحابية متعددة المستأجرين' : 'Official brand identity for the Multi-Tenant Rental SaaS Platform.'
                       });
@@ -679,7 +680,7 @@ export const Projects = ({ data, lang }) => {
                     title={lang === 'ar' ? 'انقر لتكبير الشعار' : 'Click to enlarge logo'}
                   >
                     <img
-                      src="/logos/rental-saas-logo.jpg"
+                      src={getAssetUrl("/logos/rental-saas-logo.jpg")}
                       alt="Salis Logo"
                       style={{ height: '32px', width: 'auto', objectFit: 'contain' }}
                     />
@@ -794,7 +795,7 @@ export const Projects = ({ data, lang }) => {
                   <div
                     onClick={() => {
                       setLightboxData({
-                        image: "/logos/fondoki-logo.jpg",
+                        image: getAssetUrl("/logos/fondoki-logo.jpg"),
                         title: lang === 'ar' ? 'شعار وهوية نظام فندقي لإدارة الفنادق' : 'Fondoki Hotel System Brand Logo',
                         desc: lang === 'ar' ? 'الهوية والشعار الرسمي لنظام إدارة الفنادق والضيافة فندقي' : 'Official brand identity for Fondoki Hotel Management Suite.'
                       });
@@ -813,7 +814,7 @@ export const Projects = ({ data, lang }) => {
                     title={lang === 'ar' ? 'انقر لتكبير الشعار' : 'Click to enlarge logo'}
                   >
                     <img
-                      src="/logos/fondoki-logo.jpg"
+                      src={getAssetUrl("/logos/fondoki-logo.jpg")}
                       alt="Fondoki Logo"
                       style={{ height: '32px', width: 'auto', objectFit: 'contain' }}
                     />

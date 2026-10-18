@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { LinkedInIcon, GitHubIcon } from '@/components/SocialIcons';
+import { getAssetUrl } from '@/lib/utils';
 
 export interface MinimalistHeroProps {
   logoText: string;
@@ -131,7 +132,7 @@ export const MinimalistHero = ({
             onError={(e: any) => {
               const target = e.target as HTMLImageElement;
               target.onerror = null;
-              target.src = '/mohammed-bahumaidan.jpg';
+              target.src = getAssetUrl('/mohammed-bahumaidan.jpg');
             }}
           />
         </div>

@@ -9,6 +9,7 @@ import {
   Award,
 } from "lucide-react";
 import { motion, useScroll, useTransform, useInView, useSpring } from "framer-motion";
+import { getAssetUrl } from "@/lib/utils";
 
 export interface AboutUsSectionProps {
   data?: any;
@@ -92,7 +93,7 @@ export default function AboutUsSection({ data, lang = "ar" }: AboutUsSectionProp
     },
   ];
 
-  const portraitImg = data?.personal?.avatar || "/mohammed-bahumaidan.jpg";
+  const portraitImg = data?.personal?.avatar || getAssetUrl("/mohammed-bahumaidan.jpg");
   const badgeTitle = data?.personal?.title?.[lang] || (isArabic ? "مطور .NET ومهندس برمجيات متكامل (Lead Full-Stack)" : ".NET Developer & Lead Full-Stack Engineer");
 
   // 4 high-impact production stats (1 year project cycle - سنة خبرة سنة فقط)

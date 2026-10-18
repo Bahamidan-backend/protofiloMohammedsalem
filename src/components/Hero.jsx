@@ -2,6 +2,7 @@ import React from 'react';
 import { MinimalistHero } from '@/components/ui/minimalist-hero';
 import { LinkedInIcon, GitHubIcon } from '@/components/SocialIcons';
 import { Mail, MessageSquare } from 'lucide-react';
+import { getAssetUrl } from '@/lib/utils';
 
 export const Hero = ({ data, lang, setLang }) => {
   const { personal, hero } = data;
@@ -28,7 +29,7 @@ export const Hero = ({ data, lang, setLang }) => {
       mainText={personal.shortBio[lang]}
       readMoreLink="#about"
       readMoreText={lang === 'ar' ? 'اقرأ المزيد' : 'Read More'}
-      imageSrc="/mohammed-bahumaidan-cutout.png"
+      imageSrc={getAssetUrl('/mohammed-bahumaidan-cutout.png')}
       imageAlt={personal.name[lang]}
       overlayText={{
         part1: 'less is',
